@@ -1,0 +1,1 @@
+Status options: info, warning, high, low, positive, moderate or critical.
