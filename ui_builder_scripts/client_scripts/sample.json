@@ -1,0 +1,75 @@
+{
+    "navigatedFromQuickCreate": false,
+    "productVersion": {
+        "data": {
+            "includedProductAndVersion": [
+                {
+                    "product": "e53f17b8839b5650bef196a6feaad392",
+                    "version": "3c47700c83c12210bef196a6feaad335"
+                }
+            ],
+            "primaryProduct": "3a033da3839f1210bef196a6feaad368",
+            "primaryProductDescription": "Deva",
+            "primaryProductName": "DEVA",
+            "primaryProductOwner": "System Administrator",
+            "primaryProductVersion": "9f26348883c12210bef196a6feaad308",
+            "selectedProductSysIds": [
+                "3a033da3839f1210bef196a6feaad368",
+                "e53f17b8839b5650bef196a6feaad392"
+            ],
+            "repeaterDataItems": [
+                {
+                    "product": "e53f17b8839b5650bef196a6feaad392",
+                    "productName": "Editor",
+                    "owner": "System Administrator",
+                    "shortDesc": "Editor",
+                    "versions": [
+                        {
+                            "sysId": "3c47700c83c12210bef196a6feaad335",
+                            "name": {
+                                "value": "2.0.0",
+                                "displayValue": "2.0.0"
+                            },
+                            "version": {
+                                "value": "2.0.0",
+                                "displayValue": "2.0.0"
+                            },
+                            "status": {
+                                "value": "Build",
+                                "displayValue": "Build"
+                            },
+                            "hasActiveRelease": false,
+                            "releaseSysId": null,
+                            "allowMultipleRelease": false,
+                            "isVersionBuild": true,
+                            "releasesCount": null
+                        }
+                    ],
+                    "selectedVersion": "3c47700c83c12210bef196a6feaad335"
+                }
+            ]
+        },
+        "status": "done"
+    },
+    "releaseDetails": {
+        "data": {
+            "description": "",
+            "releaseName": "asds",
+            "releaseOwner": "6816f79cc0a8016401c5a33be04be441"
+        },
+        "status": "done"
+    },
+    "releaseTarget": {
+        "data": {
+            "outOfBand": false,
+            "selectedTargetName": null
+        },
+        "status": "active"
+    },
+    "releaseTemplate": {
+        "data": {
+            "templateId": "29e3ccf983939a50bef196a6feaad3e9"
+        },
+        "status": "done"
+    }
+}
