@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:ns="http://example.com/ns">
+  <soapenv:Body>
+    <ns:GetUserResponse>
+      <ns:User id="123" active="true">
+        <ns:FirstName>Jane</ns:FirstName>
+        <ns:LastName>Doe</ns:LastName>
+      </ns:User>
+    </ns:GetUserResponse>
+  </soapenv:Body>
+</soapenv:Envelope>
