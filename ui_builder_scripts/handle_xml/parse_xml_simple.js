@@ -69,3 +69,8 @@ if (root) {
 } else {
     gs.error("Failed to parse XML: root element is null");
 }
+
+(function execute(inputs, outputs) {
+    var parsed = JSON.parse(inputs.records); // records is a JSON string
+    outputs.recordsArray = parsed; // return as array
+})(inputs, outputs);
