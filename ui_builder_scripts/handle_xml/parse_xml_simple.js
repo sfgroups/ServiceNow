@@ -1,6 +1,7 @@
 var xmlString = '';
 
 var xmlDoc = new XMLDocument2();
+xmlString = xmlString.replace(/encoding=".*?"/, "");
 xmlDoc.parseXML(xmlString);
 
 var records = [];
