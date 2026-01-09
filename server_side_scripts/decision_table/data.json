@@ -1,72 +1,31 @@
 {
-    "sys_meta": {
-        "active": "true",
-        "array": "false",
-        "attributes": "list_layout_ignore=true,model_field=decision_table,record_watcher_blacklist=true,serializer=com.glide.vars.VariableValueXMLSerializer,slushbucket_ref_no_expand=true",
-        "audit": "false",
-        "calculation": "",
-        "choice": "0",
-        "choice_field": "",
-        "choice_table": "",
-        "create_roles": "",
-        "default_value": "",
-        "delete_roles": "",
-        "dependent": "",
-        "dependent_on_field": "",
-        "display": "false",
-        "dynamic_creation": "false",
-        "dynamic_creation_script": "",
-        "dynamic_default_value": "",
-        "dynamic_ref_qual": "",
-        "element_reference": "false",
-        "filterable": "true",
-        "foreign_database": "",
-        "function_definition": "",
-        "function_field": "false",
-        "groupable": "true",
-        "help": "",
-        "hint": "",
-        "i18n_sortable": "true",
-        "internal_type": "glide_var",
-        "label": "Result elements",
-        "language": "en",
-        "mandatory": "false",
-        "matchable": "true",
-        "max_length": "32",
-        "multi_text": "false",
-        "name": "result_elements",
-        "plural": "Result elements",
-        "primary": "false",
-        "read_only": "false",
-        "read_roles": "",
-        "reference": "sys_decision_multi_result_element",
-        "reference_cascade_rule": "",
-        "reference_floats": "false",
-        "reference_key": "",
-        "reference_qual": "",
-        "reference_qual_condition": "",
-        "reference_type": "",
-        "sizeclass": "-1",
-        "sortable": "true",
-        "spell_check": "false",
-        "staged": "false",
-        "sys_package": "61a040ec31c212108a7c7b974a26f2c8",
-        "sys_scope": "global",
-        "table_reference": "false",
-        "text_index": "false",
-        "type": "12",
-        "type_description": "glide_var",
-        "unique": "false",
-        "url": "",
-        "url_target": "",
-        "use_dynamic_default": "false",
-        "use_reference_qualifier": "simple",
-        "virtual": "false",
-        "widget": "",
-        "write_roles": "",
-        "xml_view": "false"
-    },
-    "u_support_group": {},
-    "u_approval_group": {},
-    "sys_id": {}
+    "Product": [
+        {
+            "ControlID": 1,
+            "ControlName": "Team",
+            "Version": "7"
+        },
+        {
+            "ControlID": 2,
+            "ControlName": "Risk",
+            "Version": ""
+        },
+        {
+            "ControlID": 3,
+            "ControlName": "Approval",
+            "Version": ""
+        }
+    ],
+    "Release": [
+        {
+            "ControlID": 1003,
+            "ControlName": "Agreement",
+            "Version": "7"
+        },
+        {
+            "ControlID": 1004,
+            "ControlName": "Team",
+            "Version": "23,7"
+        }
+    ]
 }
