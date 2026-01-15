@@ -9,3 +9,17 @@
     // This will either Insert or Update depending on the record state
     g_form.submit('sysverb_ws_save'); 
 }
+
+
+function onClick() {
+  if (!g_form.isDirty()) {
+    g_form.addInfoMessage('No changes to save');
+    return;
+  }
+
+  g_form.save();
+   g_form.save();
+  g_form.addInfoMessage('Record saved successfully');
+}
+
+com.glide.script.Action@4e962258
