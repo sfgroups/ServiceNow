@@ -22,4 +22,4 @@ function onClick() {
   g_form.addInfoMessage('Record saved successfully');
 }
 
-com.glide.script.Action@4e962258
+
