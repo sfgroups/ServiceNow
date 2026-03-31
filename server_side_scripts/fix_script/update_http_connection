@@ -1,0 +1,60 @@
+(function() {
+
+    // 1. Scope Guard: Exit if not in Global
+    var currentScope = gs.getCurrentScopeName();
+    if (currentScope !== 'rhino.global' && currentScope !== 'global') {
+        gs.error('ABORTING: Script must run in Global scope. Currently in: ' + currentScope);
+        return; 
+    }
+
+    var connName = 'My REST IT';
+    // Use the actual backend table name; OOB it is usually sys_http_connection
+    var tableName = 'http_connection';
+
+    // New: application name to look up in ecc_agent_application
+    var appName = 'DPR';
+
+    // Lookup application sys_id from ecc_agent_application
+    var appSysId = null;
+    var appGr = new GlideRecord('ecc_agent_application');
+    appGr.addQuery('name', appName);
+    appGr.query();
+    if (appGr.next()) {
+        appSysId = appGr.getUniqueValue();
+        gs.info('Fix Script: Found application "' + appName + '" sys_id=' + appSysId);
+    } else {
+        gs.error('Fix Script: Application "' + appName + '" not found in ecc_agent_application. Aborting update.');
+        return;
+    }
+
+
+    var gr = new GlideRecord(tableName);
+    gr.addQuery('name', connName);
+    gr.query();
+
+    if (gr.next()) {
+        gs.info('Fix Script: Found record ' + connName + '. Starting update...');
+
+        // 3. Set values - Use sys_id for 'application' if it's a reference field
+        gr.setValue('use_mid', true);
+        gr.setValue('application', appSysId);
+        gr.setValue('capabilities', '');      
+
+        var updateCheck = gr.update();
+
+        // 5. Re-query to verify the database state directly
+        if (updateCheck) {
+            var verifyGr = new GlideRecord(tableName);
+            if (verifyGr.get(updateCheck)) {
+                gs.info('--- Database Verification ---');
+                gs.info('Application: ' + verifyGr.getValue('application'));
+                gs.info('Capabilities: ' + (verifyGr.getValue('capabilities') || 'EMPTY'));
+                gs.info('Use MID Server: ' + verifyGr.getValue('use_mid'));
+            }
+        } else {
+            gs.error('Fix Script: Update failed. This may be due to an ACL or Scope restriction.');
+        }
+    } else {
+        gs.error('Fix Script: Record "' + connName + '" not found on table ' + tableName);
+    }
+})();
